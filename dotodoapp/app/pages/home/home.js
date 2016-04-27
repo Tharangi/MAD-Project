@@ -66,7 +66,6 @@ export class HomePage {
     editTodo(id, status){
         this.dbservice.editTodo(id, status).then((data) => {
             this.nav.present(Alert.create({
-                //title: 'Success',
                 subTitle: 'Todo updated successfully!',
                 buttons: [{
                     text: 'OK',
@@ -139,7 +138,6 @@ class MyModal{
                 }
                 console.log(msg);
                 this.nav.present(Alert.create({
-                    //title: 'Success',
                     subTitle: msg,
                     buttons: [{
                         text: 'OK',
