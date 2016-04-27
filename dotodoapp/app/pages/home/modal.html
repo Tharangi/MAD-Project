@@ -1,0 +1,38 @@
+<!--Jayaweera W.A.H.M. Dinuka T Jayaweera-->
+<ion-toolbar primary>
+    <ion-title>
+        {{label}} Todo
+    </ion-title>
+    <ion-buttons start>
+        <button light (click)="close()">
+            <span showWhen="ios">Cancel</span>
+            <ion-icon name="close" showWhen="android"></ion-icon>
+        </button>
+    </ion-buttons>
+</ion-toolbar>
+
+<ion-content>
+
+    <ion-list>
+
+        <ion-item>
+            <ion-label stacked>Enter your Todo here...</ion-label>
+            <ion-input type="text" [(ngModel)]="task"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Priority</ion-label>
+            <ion-select [(ngModel)]="priority">
+                <ion-option value="Important">Important</ion-option>
+                <ion-option value="Normal">Normal</ion-option>
+                <ion-option value="Not-Important">Not Important</ion-option>
+            </ion-select>
+        </ion-item>
+
+    </ion-list>
+
+    <div padding>
+        <button full round (click)="saveTodo()">Save</button>
+    </div>
+
+</ion-content>
